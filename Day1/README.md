@@ -50,17 +50,27 @@ To merge the two arrays `nums1` and `nums2` into a single sorted array in-place 
 
 ## Approach 
 
+The approach to this problem is very simple . What we are going to do is , just iterate from backwards in both the arrays and keep comparing the elements .
+
 1) Use three pointers:
 
-   - p1 starting from the end of the meaningful part of nums1 (that is the part that contains actual values and not a filled values of zero) (m - 1).
-   - p2 starting from the end of nums2 (n - 1).
-   - p starting from the end of nums1 (m + n - 1), where the merged result will be placed.
+   - p1  second pointer p1 is going to be at the end of actual `nums1` array i.e m-1. We will be using it for comparision of element from the `nums2` array. (m - 1).
+   - p2  the third pointer p2 is going to be at the end of the nums2 array used in comparision . (n - 1)
+   - p One pointer p is going to be at the end of nums1 array which is `m + n - 1` which is going to help in merging the elements.
 
 2) Compare elements from the back of nums1 and nums2, and place the larger one at the position p in  nums1.
 
 3) Move the pointers p1, p2, and p accordingly.
 
 4) If there are remaining elements in nums2, copy them to the beginning of nums1. There's no need to  worry about leftover elements in nums1 because they are already in place..
+
+## Why Backwards ?
+
+Because we are given that both arrays are sorted and store elements in a non - decreasing order (i.e increasing order. so , the last element of `nums2` array must be the greatest element in `nums2` . Similarly , the last element of `nums1` array must be the greatest element in nums1 . This is the reason why we are starting `p1` and `p2` backwards.
+
+Also, when we complete the merged sorted array `nums1` , it must stay in increasing order which means the last position in `nums1` which is kept empty , will hold the largest element out of `nums1` and `nums2` by comparing the largest elements from the last positions of nums1 and nums2 in their individual arrays.
+
+
 
 
 ## Explanation:
