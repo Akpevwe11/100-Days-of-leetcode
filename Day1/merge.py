@@ -24,6 +24,7 @@ class Solution:
             p -= 1
 
             # If there are remaining elements in nums2, copy them to nums1
-            # No need to copy nums1 leftovers as they are already in place
+            # but if the range of nums1 is already covered, no need to copy
+
             
         nums1[:p2 + 1] = nums2[:p2 + 1]

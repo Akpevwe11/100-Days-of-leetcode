@@ -52,7 +52,7 @@ To merge the two arrays `nums1` and `nums2` into a single sorted array in-place 
 
 1) Use three pointers:
 
-   - p1 starting from the end of the meaningful part of nums1 (m - 1).
+   - p1 starting from the end of the meaningful part of nums1 (that is the part that contains actual values and not a filled values of zero) (m - 1).
    - p2 starting from the end of nums2 (n - 1).
    - p starting from the end of nums1 (m + n - 1), where the merged result will be placed.
 
