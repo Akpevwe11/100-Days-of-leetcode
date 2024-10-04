@@ -3,8 +3,7 @@ from typing import List
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         """
-         Retruns the length of the array after removing all instances of val
-         
+        Retruns the length of the array after removing all instances of val
         """
 
         k = 0 #This pointer will track the position for elements not equal to val
