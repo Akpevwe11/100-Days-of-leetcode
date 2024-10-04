@@ -96,6 +96,31 @@ and the remaining elements of the arrayy don't matter.
     - Final `nums = [2, 2, _, _], and `k = 2`.
 
 
+    ## Example 2:
+
+     ```py
+
+        nums = [0, 1, 2, 2, 3, 0, 4, 2]
+        val = 2
+
+     ``` 
+
+      - Iniially, `k = 0`. 
+      - At `i = 0`, `nums[0] == 0`, se we set `nums[k] = nums[0]` -> `nums[0] = 0` and increment `k` to 1.
+      - At `i = 1`, nums[1] == 1, so we set `nums[k] = nums[1]` -> `nums[1] = 1` and increment `k to 2`.
+      - At `i = 2`, `nums[2] == 2`, so we skip it. 
+      - At `i = 3`, `nums[3] == 2` so we skip it.
+      - At  `i = 4`, `nums[4] == 3`, so we set `nums[k] = nums[4]` -> `nums[4] -> nums[2] = 3` and increment `k` to 3. 
+
+      - At `i = 5`, `nums[5] == 0`, so we set `nums[k] = nums[5]` -> `nums[3] = 0` and increment `k` to 4.
+
+      - At `i = 6`, `nums[6] == 4`, so we set `nums[k] = nums[6]` → `nums[4] = 4` and increment `k` to 5.
+      - At `i = 7`, `nums[7] == 2`, so we skip it.
+      - Final `nums = [0, 1, 3, 0, 4, _, _, _]`, and `k = 5`.
+
+
+
+
     ## Time Complexity: 
 
     - O(n) where `n` is the length of `nums` because we only iterate through the array once. 
