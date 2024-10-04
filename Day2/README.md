@@ -52,3 +52,57 @@ Constraints:
     0 <= nums[i] <= 50
     0 <= val <= 100
 
+
+## Solution 
+
+To solve this problem, the approach involves modifying the array `nums` in-place, moving elements 
+that are not equal to `val` to the front of the array, and returning the count of those elements (
+    let's call it `k`). We need to ensure that the first `k` elements are the ones not equal to `val`, 
+and the remaining elements of the arrayy don't matter.
+
+## Approach: 
+
+1. Pointer Approach: 
+    - Use two pointers: one pointer `(i)` to iterate through the array, and another pointer `(k)` to 
+    keep track of where the next element (that is not equal to `val`) should be placed. 
+
+2. Iteration:
+    - Traverse the array using pointer `i`.
+    - Every time you encounter an lement that is not equaul to `val`, assign it to the `k`-th position of the array and increment `k`. 
+
+3. Return `k`:
+    - After the loop finishes, `k` will represent the number of lements in `nums` that are not equal to `val`, and the first `k` elements will be those elements. 
+
+
+    ## Explanation: 
+
+    - We initialize `k` to 0. 
+    - We loop through the array `nums`. For each element nums[i]:
+        - If nums[i] is not equal to `val`, we copy it to the `k`-thh position and increment `k`.
+    - After the loops ends, `k` will hold the number of elements in `nums` that are not equal to `val`.
+
+    ## Example Walkthrough
+
+    ```py
+            nums = [3, 2, 2, 3]
+            val = 3
+    ```
+
+    - initially, `k = 0`.
+    - At `i = 0`, `nums[0] == 3`, so we skip it. 
+    - At  `i = 1`, `nums[1] == 2`, so we set `nums[k] = nums[1]` -> `nums[0] = 2` and increment `k` to 1.
+    - At `i = 2`, `nums[2] == 2`, so we set `nums[k] = nums[2]` -> `nums[1] = 2` and increment `k` to 2.
+    - At `i = 3`, `nums[3] == 3`, so we skip it. 
+    - Final `nums = [2, 2, _, _], and `k = 2`.
+
+
+    ## Time Complexity: 
+
+    - O(n) where `n` is the length of `nums` because we only iterate through the array once. 
+
+    ## Space Complexity: 
+
+    - O(1)  since we do the operation in-place without needing any additional memory. 
+
+
+
