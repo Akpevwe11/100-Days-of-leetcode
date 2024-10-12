@@ -24,3 +24,25 @@ Constraints:
     n == nums.length
     1 <= n <= 5 * 104
     -109 <= nums[i] <= 109
+
+## Solution 
+
+To solve the Majority Element problem, we need to find the element in the array that appears more than Ln/2_| times, where `n` is the size of the array. One efficient approach to solve this problem is 
+**Boyer-Moore Voting Algotithem** which operates on `O(n)` time and `O(1)` space.
+
+### Steps for the Boyer-Moore Voting Algorithm:
+
+1. We maintain two variables: 
+
+- candidate -- The current majority candidate. 
+- count -- the count of the candidate.
+
+2. We traverse through the array: 
+
+- If `count` is 0, we assign the current element as the new candidate.
+- If the current element is the same as `candidate`, we increment `count`.
+- Otherwise, we decrement `count`.
+
+3. After completing the loop, the `candidate` will be the majoroity element.
+
+### Example walkthrough
