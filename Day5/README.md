@@ -27,7 +27,7 @@ Constraints:
 
 ## Solution 
 
-To solve the Majority Element problem, we need to find the element in the array that appears more than Ln/2_| times, where `n` is the size of the array. One efficient approach to solve this problem is 
+To solve the Majority Element problem, we need to find the element in the array that appears more than n /2times, where `n` is the size of the array. One efficient approach to solve this problem is 
 **Boyer-Moore Voting Algotithem** which operates on `O(n)` time and `O(1)` space.
 
 ### Steps for the Boyer-Moore Voting Algorithm:
@@ -64,3 +64,5 @@ For nums = `[2, 2, 1, 1, 1, 2, 2]`
 
 - Time complexity: O(n), where `n` is the length of the array. 
 - Space complexity: O(1), because we use only a constant amount of extra space.
+
+- The catch is one majority element is there more than N/2 times.
