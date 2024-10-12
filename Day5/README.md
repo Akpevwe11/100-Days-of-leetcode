@@ -46,3 +46,21 @@ To solve the Majority Element problem, we need to find the element in the array 
 3. After completing the loop, the `candidate` will be the majoroity element.
 
 ### Example walkthrough
+
+For nums = `[2, 2, 1, 1, 1, 2, 2]`
+- Initially: `candiate = None`, `count = 0`.
+- Process each element: 
+    - First `2`: `candidate = 2`, count = 1.
+    - Second `2`: `candidate = 2`, count = 2. 
+    - First `1`: `count = 1` (decrement since 1 != 2).
+    - Second `1`: `count = 0`.
+    - Third `1`: `candidate = 1`, count = 1.
+    - Fourth `2`: `count = 0`.
+    - Fifth `2`: `candidate = 2`, `count = 1`.
+
+-- The result isi 2.
+
+## Time and Space Complexity: 
+
+- Time complexity: O(n), where `n` is the length of the array. 
+- Space complexity: O(1), because we use only a constant amount of extra space.
